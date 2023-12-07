@@ -2,20 +2,11 @@ package com.java.assignment.bean;
 
 import javax.persistence.Id;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
 @Entity
 public class Transaction {
 
@@ -28,5 +19,41 @@ public class Transaction {
 	private Integer toAccountId;
 	@ApiModelProperty(required = true)
 	private Integer amount;
+	public Transaction() {
+		super();
+	}
+	public Transaction(Integer id, Integer fromAccountId, Integer toAccountId, Integer amount) {
+		super();
+		this.id = id;
+		this.fromAccountId = fromAccountId;
+		this.toAccountId = toAccountId;
+		this.amount = amount;
+	}
+	public Integer getId() {
+		return id;
+	}
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	public Integer getFromAccountId() {
+		return fromAccountId;
+	}
+	public void setFromAccountId(Integer fromAccountId) {
+		this.fromAccountId = fromAccountId;
+	}
+	public Integer getToAccountId() {
+		return toAccountId;
+	}
+	public void setToAccountId(Integer toAccountId) {
+		this.toAccountId = toAccountId;
+	}
+	public Integer getAmount() {
+		return amount;
+	}
+	public void setAmount(Integer amount) {
+		this.amount = amount;
+	}
+	
+	
 	
 }
