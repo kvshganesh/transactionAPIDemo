@@ -1,0 +1,27 @@
+DeviceType
+	id (PK)
+	name
+City
+	id (PK)
+	name
+User
+	id (PK)
+	name
+	role
+	dateOfBirth
+	username
+	password
+CardDetails
+	id (PK)
+	userid (FK)
+	cardNumber
+	cardType
+Journey
+	id (PK)
+	sourceCityId (FK)
+	destinationCityId (FK)
+	dateOfJourney
+	userId (FK)
+	amount
+	devictTypeId (FK)
+	cardDetaildId (FK)
